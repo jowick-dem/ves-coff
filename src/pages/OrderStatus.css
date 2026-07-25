@@ -1,0 +1,125 @@
+.order-status-page {
+    padding: 8rem 2rem 4rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+.status-container {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.status-icon-wrapper {
+    color: #2ecc71;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.status-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.status-container h1 {
+    font-size: 2rem;
+    color: var(--coffee-dark);
+    margin-bottom: 0.5rem;
+}
+
+.order-number {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    font-family: monospace;
+    background: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.status-card {
+    background: var(--bg-color);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: left;
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.status-header>svg {
+    color: var(--accent);
+}
+
+.status-info h3 {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.2rem;
+}
+
+.status-info p {
+    color: var(--coffee-dark);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.progress-section {
+    position: relative;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.progress-bar-bg {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 4px;
+    transition: width 0.3s linear;
+}
+
+.progress-text {
+    text-align: center;
+    color: var(--text-color);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

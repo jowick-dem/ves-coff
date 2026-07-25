@@ -1,0 +1,5 @@
+/* Default Vite App.css cleared to avoid conflicts */
+.app {
+  width: 100%;
+  min-height: 100vh;
+}

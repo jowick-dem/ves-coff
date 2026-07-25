@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #a8906b;
+  --coffee-dark: #1F1410;
+  --coffee-medium: #3E2723;
+  --coffee-light: #5D4037;
+  --cream: #F5EAE1;
+  --white: #FCF9F6;
+  --text-main: #1F1410;
+  --text-light: #5D4037;
+  --accent: #8c785d;
+  --accent-color: #8c785d;
+  --accent-light: #d6caba;
+  --accent-hover: #736148;
+  --button-hover: #736148;
+  --font-main: 'Outfit', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--white);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Layout Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  font-family: var(--font-main);
+}
+
+.btn-primary {
+  background-color: var(--coffee-dark);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--coffee-dark);
+  border: 1px solid var(--coffee-dark);
+}
+
+.btn-outline:hover {
+  background-color: var(--coffee-dark);
+  color: var(--white);
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--coffee-dark);
+}
+
+.section-title span {
+  color: var(--accent);
+}
