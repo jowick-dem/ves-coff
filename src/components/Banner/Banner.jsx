@@ -1,46 +1,19 @@
 import React from 'react';
 import './Banner.css';
 import bgImg from '../../assets/banner_bg.png';
-import espressoImg from '../../assets/espresso_shot.png';
-import latteImg from '../../assets/latte_cup.png';
 
 const Banner = () => {
-    return (
-        <section className="banner" id="home">
-            <div
-                className="banner-background"
-                style={{ backgroundImage: `url(${bgImg})` }}
-            >
-                <div className="banner-overlay"></div>
-            </div>
-
-            <div className="container banner-content-wrapper">
-                <div className="banner-text-content">
-                    <h1 className="banner-title">
-                        Awaken Your Senses with <span>Perfect Brews</span>
-                    </h1>
-                    <p className="banner-subtitle">
-                        Experience the finest artisanal coffee, ethically sourced and masterfully roasted to bring out the subtle notes hiding in every bean.
-                    </p>
-                    <div className="banner-buttons">
-                        <button className="btn btn-primary">Our Menu</button>
-                        <button className="btn btn-outline banner-outline-btn">
-                            Book a Table
-                        </button>
-                    </div>
-                </div>
-                
-                <div className="banner-visuals">
-                    <div className="image-card top-image">
-                        <img src={latteImg} alt="Latte Art" />
-                    </div>
-                    <div className="image-card bottom-image">
-                        <img src={espressoImg} alt="Espresso Shot" />
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <section className="hero" id="home" style={{ backgroundImage: `url(${bgImg})` }}>
+      <div className="hero-content">
+        <h1 style={{ letterSpacing: '-1px' }}>Vespa Coffee</h1>
+        <p style={{ fontFamily: "'Reenie Beanie', cursive", fontSize: '2rem', fontStyle: 'normal', letterSpacing: '-0.5px', wordSpacing: '-2px' }}>
+          Sejuta Cerita. Earthy vibes and endless horizons.
+        </p>
+        <a href="#visit" className="btn btn-hero">Visit Us</a>
+      </div>
+    </section>
+  );
 };
 
 export default Banner;

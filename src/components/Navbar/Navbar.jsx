@@ -1,49 +1,51 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { ShoppingBag } from 'lucide-react';
-import { CartContext } from '../../context/CartContext';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
-const Navbar = ({ onCartClick }) => {
+const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const { cartCount } = useContext(CartContext);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    document.body.style.overflow = !isOpen ? 'hidden' : '';
+  };
+
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-      <div className="container nav-container">
-        <Link to="/" className="logo">
-          Brews<span>&</span>Beans
-        </Link>
-
-        <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/menu">Menu</Link></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-
-        <div className="nav-actions">
-          <button className="cart-icon-btn" onClick={onCartClick} aria-label="Open cart">
-            <ShoppingBag size={24} />
-            {cartCount() > 0 && <span className="cart-badge">{cartCount()}</span>}
-          </button>
+    <>
+      <nav id="navbar" style={{
+        padding: scrolled ? '0.5rem 5%' : '1rem 5%',
+        boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.1)' : '0 2px 10px rgba(0,0,0,0.05)'
+      }}>
+        <div className="logo-container">
+          <img src="/logo_no_bg.png" alt="Vespa Coffee Logo" className="logo-img" onError={(e) => e.target.style.display = 'none'} />
+          <a href="#" className="logo-text">VESPA COFFEE</a>
         </div>
+        <div className="nav-links">
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#visit">Visit Us</a>
+        </div>
+        <button className={`hamburger ${isOpen ? 'open' : ''}`} aria-label="Open menu" onClick={toggleMenu}>
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+
+      <div className={`mobile-overlay ${isOpen ? 'open' : ''}`} onClick={toggleMenu}></div>
+      <div className={`mobile-drawer ${isOpen ? 'open' : ''}`}>
+        <button className="drawer-close" onClick={toggleMenu} aria-label="Close menu">&#10005;</button>
+        <a href="#about" onClick={toggleMenu}>About</a>
+        <a href="#menu" onClick={toggleMenu}>Menu</a>
+        <a href="#gallery" onClick={toggleMenu}>Gallery</a>
+        <a href="#visit" onClick={toggleMenu}>Visit Us</a>
       </div>
-    </nav>
+    </>
   );
 };
-
 export default Navbar;
