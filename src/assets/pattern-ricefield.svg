@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g opacity="0.04" stroke="#3b312a" fill="none" stroke-width="0.8">
+    <!-- rice terraces (curved lines) -->
+    <path d="M0 20 Q 25 15, 50 30 T 100 20" />
+    <path d="M0 45 Q 35 40, 60 55 T 100 45" />
+    <path d="M0 70 Q 20 80, 45 75 T 100 85" />
+    <!-- rice stalks (small angled clusters) -->
+    <g stroke-width="0.6">
+      <path d="M20 18 l-2 -5 M20 18 l2 -6 M20 18 l4 -3" />
+      <path d="M60 28 l-3 -5 M60 28 l1 -6 M60 28 l4 -4" />
+      <path d="M30 43 l-2 -4 M30 43 l1 -5" />
+      <path d="M80 50 l-3 -5 M80 50 l2 -6 M80 50 l5 -4" />
+      <path d="M40 76 l-2 -5 M40 76 l2 -6 M40 76 l4 -4" />
+      <path d="M75 80 l-2 -4 M75 80 l3 -5" />
+    </g>
+  </g>
+</svg>
