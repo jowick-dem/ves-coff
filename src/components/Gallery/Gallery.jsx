@@ -3,11 +3,7 @@ import './Gallery.css';
 
 const Gallery = () => {
   const base = import.meta.env.BASE_URL;
-  const images = [
-    `${base}assets/photo-9.webp`,
-    `${base}assets/photo-10.webp`,
-    `${base}assets/photo-11.webp`,
-    `${base}assets/photo-12.webp`,
+  const portraits = [
     `${base}assets/photo-1.webp`,
     `${base}assets/photo-2.webp`,
     `${base}assets/photo-3.webp`,
@@ -15,7 +11,20 @@ const Gallery = () => {
     `${base}assets/photo-5.webp`,
     `${base}assets/photo-6.webp`,
     `${base}assets/photo-7.webp`,
-    `${base}assets/photo-8.webp`
+    `${base}assets/photo-8.webp`,
+    `${base}assets/photo-15.webp`,
+    `${base}assets/photo-16.webp`,
+    `${base}assets/photo-17.webp`,
+    `${base}assets/photo-18.webp`
+  ];
+
+  const landscapes = [
+    `${base}assets/photo-9.webp`,
+    `${base}assets/photo-10.webp`,
+    `${base}assets/photo-11.webp`,
+    `${base}assets/photo-12.webp`,
+    `${base}assets/photo-13.webp`,
+    `${base}assets/photo-14.webp`
   ];
 
   return (
@@ -26,12 +35,27 @@ const Gallery = () => {
           A glimpse into our open-air sanctuary.
         </p>
       </div>
-      <div className="masonry-grid fade-in-section">
-        {images.map((src, i) => (
-          <div key={i} className="masonry-item">
-            <img loading="lazy" src={src} alt={`Gallery Image ${i+1}`} />
-          </div>
-        ))}
+
+      <div className="gallery-section fade-in-section">
+        <h3 style={{ fontFamily: "'Oregano', cursive", textAlign: 'center', marginBottom: '20px' }}>Portraits</h3>
+        <div className="masonry-grid portrait-grid">
+          {portraits.map((src, i) => (
+            <div key={i} className="masonry-item">
+              <img loading="lazy" src={src} alt={`Portrait ${i+1}`} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="gallery-section fade-in-section" style={{ marginTop: '40px' }}>
+        <h3 style={{ fontFamily: "'Oregano', cursive", textAlign: 'center', marginBottom: '20px' }}>Landscapes</h3>
+        <div className="masonry-grid landscape-grid">
+          {landscapes.map((src, i) => (
+            <div key={i} className="masonry-item">
+              <img loading="lazy" src={src} alt={`Landscape ${i+1}`} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

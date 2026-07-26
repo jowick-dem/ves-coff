@@ -1,6 +1,6 @@
 import React from 'react';
 import './Banner.css';
-import bgImg from '../../assets/banner_bg.png';
+import bgImg from '../../../public/assets/photo-6.webp';
 
 const Banner = () => {
   return (
