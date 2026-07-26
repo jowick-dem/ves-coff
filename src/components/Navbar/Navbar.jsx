@@ -16,6 +16,13 @@ const Navbar = () => {
     document.body.style.overflow = !isOpen ? 'hidden' : '';
   };
 
+  const scrollTo = (e, id) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (isOpen) toggleMenu();
+  };
+
   return (
     <>
       <nav id="navbar" style={{
@@ -24,13 +31,13 @@ const Navbar = () => {
       }}>
         <div className="logo-container">
           <img src={`${import.meta.env.BASE_URL}logo_no_bg.png`} alt="Vespa Coffee Logo" className="logo-img" onError={(e) => e.target.style.display = 'none'} />
-          <a href="#" className="logo-text">VESPA COFFEE</a>
+          <a onClick={(e) => scrollTo(e, 'top')} style={{ cursor: 'pointer' }} className="logo-text">VESPA COFFEE</a>
         </div>
         <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#menu">Menu</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#visit">Visit Us</a>
+          <a onClick={(e) => scrollTo(e, 'about')} style={{ cursor: 'pointer' }}>About</a>
+          <a onClick={(e) => scrollTo(e, 'menu')} style={{ cursor: 'pointer' }}>Menu</a>
+          <a onClick={(e) => scrollTo(e, 'gallery')} style={{ cursor: 'pointer' }}>Gallery</a>
+          <a onClick={(e) => scrollTo(e, 'visit')} style={{ cursor: 'pointer' }}>Visit Us</a>
         </div>
         <button className={`hamburger ${isOpen ? 'open' : ''}`} aria-label="Open menu" onClick={toggleMenu}>
           <span></span><span></span><span></span>
@@ -40,10 +47,10 @@ const Navbar = () => {
       <div className={`mobile-overlay ${isOpen ? 'open' : ''}`} onClick={toggleMenu}></div>
       <div className={`mobile-drawer ${isOpen ? 'open' : ''}`}>
         <button className="drawer-close" onClick={toggleMenu} aria-label="Close menu">&#10005;</button>
-        <a href="#about" onClick={toggleMenu}>About</a>
-        <a href="#menu" onClick={toggleMenu}>Menu</a>
-        <a href="#gallery" onClick={toggleMenu}>Gallery</a>
-        <a href="#visit" onClick={toggleMenu}>Visit Us</a>
+        <a onClick={(e) => scrollTo(e, 'about')} style={{ cursor: 'pointer' }}>About</a>
+        <a onClick={(e) => scrollTo(e, 'menu')} style={{ cursor: 'pointer' }}>Menu</a>
+        <a onClick={(e) => scrollTo(e, 'gallery')} style={{ cursor: 'pointer' }}>Gallery</a>
+        <a onClick={(e) => scrollTo(e, 'visit')} style={{ cursor: 'pointer' }}>Visit Us</a>
       </div>
     </>
   );

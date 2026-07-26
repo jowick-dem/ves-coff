@@ -15,7 +15,7 @@ const About = () => {
     <section id="about" className="section">
       <div className="about-container fade-in-section">
         <div className="about-text">
-          <h3 style={{ fontFamily: "'Oregano', cursive" }}>Our Story</h3>
+          <h3 className="about-heading" style={{ fontFamily: "'Oregano', cursive" }}>Our Story</h3>
           <p>
             Nestled in the heart of nature, Vespa Coffee isn't just a place to grab a cup—it's an experience. Surrounded by lush fields and bathed in golden twilight, our café was born out of a love for open skies, great coffee, and the timeless charm of classic Vespas.
           </p>
@@ -26,12 +26,12 @@ const About = () => {
         <div className="about-slideshow">
           {slides.map((src, i) => (
             <div key={i} className={`slide ${i === current ? 'active' : ''}`}>
-              <img src={src} alt="Vespa Coffee Atmosphere" />
+              <img src={src} alt="Vespa Coffee Atmosphere" width="600" height="400" />
             </div>
           ))}
           <div className="slide-dots">
             {slides.map((_, i) => (
-              <span key={i} className={`dot ${i === current ? 'active' : ''}`} onClick={() => setCurrent(i)}></span>
+              <span key={i} className={`dot ${i === current ? 'active' : ''}`} onClick={() => setCurrent(i)} aria-label={`Slide ${i + 1}`}></span>
             ))}
           </div>
         </div>
