@@ -3,7 +3,8 @@ import './About.css';
 
 const About = () => {
   const [current, setCurrent] = useState(0);
-  const slides = ['/assets/photo-10.webp', '/assets/photo-11.webp', '/assets/photo-12.webp', '/assets/photo-13.webp', '/assets/photo-14.webp'];
+  const base = import.meta.env.BASE_URL;
+  const slides = [`${base}assets/photo-10.webp`, `${base}assets/photo-11.webp`, `${base}assets/photo-12.webp`, `${base}assets/photo-13.webp`, `${base}assets/photo-14.webp`];
 
   useEffect(() => {
     const timer = setInterval(() => setCurrent(c => (c + 1) % slides.length), 4000);

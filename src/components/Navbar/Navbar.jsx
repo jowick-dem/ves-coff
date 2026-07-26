@@ -23,7 +23,7 @@ const Navbar = () => {
         boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.1)' : '0 2px 10px rgba(0,0,0,0.05)'
       }}>
         <div className="logo-container">
-          <img src="/logo_no_bg.png" alt="Vespa Coffee Logo" className="logo-img" onError={(e) => e.target.style.display = 'none'} />
+          <img src={`${import.meta.env.BASE_URL}logo_no_bg.png`} alt="Vespa Coffee Logo" className="logo-img" onError={(e) => e.target.style.display = 'none'} />
           <a href="#" className="logo-text">VESPA COFFEE</a>
         </div>
         <div className="nav-links">
