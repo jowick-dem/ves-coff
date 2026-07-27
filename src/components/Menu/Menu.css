@@ -1,4 +1,8 @@
 .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+.menu-section { margin-bottom: 3rem; }
+.menu-section-title-wrap { display: flex; align-items: center; gap: 0.75rem; max-width: 1200px; margin: 0 auto 1.5rem; }
+.menu-section-bar { width: 8px; height: 32px; border-radius: 4px; flex-shrink: 0; }
+.menu-section-title { font-size: 1.8rem; margin: 0; color: var(--accent-color); }
 .menu-item {
   background: #fff; border-radius: 8px; overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative;
@@ -9,3 +13,4 @@
 .menu-category { display: inline-block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-light); margin-bottom: 0.6rem; opacity: 0.75; }
 .menu-content h4 { font-family: 'Caveat', cursive; font-size: 1.5rem; margin-bottom: 0.6rem; color: var(--accent-color); line-height: 1.3; }
 .menu-content p { color: var(--text-light); font-size: 0.92rem; line-height: 1.65; }
+.menu-price { display: inline-block; margin-top: 0.8rem; font-family: 'Caveat', cursive; font-size: 1.2rem; color: var(--accent-color); font-weight: 600; background: #fcf9f2; padding: 0.25rem 1rem; border-radius: 20px; }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import BrandName from '../BrandName';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
       }}>
         <div className="logo-container">
           <img src={`${import.meta.env.BASE_URL}logo_no_bg.png`} alt="Vespa Coffee Logo" className="logo-img" onError={(e) => e.target.style.display = 'none'} />
-          <a onClick={(e) => scrollTo(e, 'top')} style={{ cursor: 'pointer' }} className="logo-text">VESPA COFFEE</a>
+          <a onClick={(e) => scrollTo(e, 'top')} style={{ cursor: 'pointer' }} className="logo-text"><BrandName /></a>
         </div>
         <div className="nav-links">
           <a onClick={(e) => scrollTo(e, 'about')} style={{ cursor: 'pointer' }}>About</a>

@@ -3,3 +3,6 @@
   width: 100%;
   min-height: 100vh;
 }
+.brand-bean { display: inline; height: 0.7em; width: auto; vertical-align: -0.08em; }
+.nav-links .brand-bean { color: var(--text-light); }
+.footer-logo .brand-bean { color: #fff; }
