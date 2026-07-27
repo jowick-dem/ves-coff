@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Banner.css';
 import bgImg from '../../../public/assets/photo-20.webp';
 
 const Banner = () => {
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = bgImg;
+    document.head.appendChild(link);
+    return () => link.remove();
+  }, []);
+
   return (
     <section className="hero" id="home">
       <img src={bgImg} alt="Vespa Coffee Ricefield Background" className="hero-bg-img" fetchPriority="high" width="1200" height="800" />

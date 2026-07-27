@@ -82,7 +82,7 @@ const About = () => {
           <div className="about-slideshow-inner">
             {slides.map((src, i) => (
               <div key={i} className={`slide ${i === current ? 'active' : ''}`}>
-                <img src={src} alt="Vespa Coffee Atmosphere" width="600" height="400" />
+                <img src={src} alt="Vespa Coffee Atmosphere" width="600" height="400" loading={i === 0 ? 'eager' : 'lazy'} />
               </div>
             ))}
           </div>
