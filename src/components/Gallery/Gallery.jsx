@@ -13,9 +13,27 @@ const Gallery = () => {
     `${base}assets/photo-7.webp`,
     `${base}assets/photo-8.webp`,
     `${base}assets/photo-15.webp`,
-    `${base}assets/photo-16.webp`,
     `${base}assets/photo-17.webp`,
-    `${base}assets/photo-18.webp`
+    `${base}assets/photo-18.webp`,
+    `${base}assets/photo-21.webp`,
+    `${base}assets/photo-22.webp`,
+    `${base}assets/photo-24.webp`,
+    `${base}assets/photo-25.webp`,
+    `${base}assets/photo-26.webp`,
+    `${base}assets/photo-27.webp`,
+    `${base}assets/photo-28.webp`,
+    `${base}assets/photo-29.webp`,
+    `${base}assets/photo-30.webp`,
+    `${base}assets/photo-31.webp`,
+    `${base}assets/photo-32.webp`,
+    `${base}assets/photo-33.webp`,
+    `${base}assets/photo-34.webp`,
+    `${base}assets/photo-35.webp`,
+    `${base}assets/photo-36.webp`,
+    `${base}assets/photo-37.webp`,
+    `${base}assets/photo-38.webp`,
+    `${base}assets/photo-40.webp`,
+    `${base}assets/photo-41.webp`
   ];
 
   const landscapes = [
@@ -24,7 +42,10 @@ const Gallery = () => {
     `${base}assets/photo-11.webp`,
     `${base}assets/photo-12.webp`,
     `${base}assets/photo-13.webp`,
-    `${base}assets/photo-14.webp`
+    `${base}assets/photo-14.webp`,
+    `${base}assets/photo-19.webp`,
+    `${base}assets/photo-20.webp`,
+    `${base}assets/photo-23.webp`
   ];
 
   return (
